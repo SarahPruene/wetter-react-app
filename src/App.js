@@ -10,13 +10,14 @@ export default function App() {
           <a
             href='https://github.com/SarahPruene/shecodes-react-weather-app'
             target='_blank'
+            rel='noreferrer'
           >
             open-sourced on Github
           </a>{' '}
           and{' '}
-          <a href='/' target='_blank'>
+          <a href='/' target='_blank' rel='noreferrer'>
             hosted on Netlify
-          </a>  
+          </a>
         </footer>
       </div>
     </div>
