@@ -7,18 +7,22 @@ export default function App() {
   return (
     <div className='App'>
       <div className='container'>
-        <Weather defaultCity='London'/>
+        <Weather defaultCity='London' />
         <footer>
           This projects was coded by <span>Sarah</span> and is{' '}
           <a
-            href='https://github.com/SarahPruene/shecodes-react-weather-app'
+            href='https://github.com/SarahPruene/wetter-react-app'
             target='_blank'
             rel='noreferrer'
           >
             open-sourced on Github
           </a>{' '}
           and{' '}
-          <a href='/' target='_blank' rel='noreferrer'>
+          <a
+            href='https://sharp-yonath-8d2882.netlify.app/'
+            target='_blank'
+            rel='noreferrer'
+          >
             hosted on Netlify
           </a>
         </footer>
