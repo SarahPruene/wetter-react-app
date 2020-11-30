@@ -1,6 +1,7 @@
 import React from 'react'
 import Weather from './Weather'
-import './App.css'
+import './styles/style.css'
+import './styles/App.css'
 
 export default function App() {
   return (
@@ -8,8 +9,7 @@ export default function App() {
       <div className='container'>
         <Weather />
         <footer>
-          This projects was coded by <span>Sarah</span>{' '}
-          and is{' '}
+          This projects was coded by <span>Sarah</span> and is{' '}
           <a
             href='https://github.com/SarahPruene/shecodes-react-weather-app'
             target='_blank'
@@ -26,4 +26,3 @@ export default function App() {
     </div>
   )
 }
-
