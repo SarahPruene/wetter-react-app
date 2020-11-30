@@ -6,7 +6,7 @@ export default function App() {
     <div>
       <div className='container'>
         <footer>
-          This projects was coded by <span>Sarah</span>
+          This projects was coded by <span>Sarah</span>{' '}
           and is{' '}
           <a
             href='https://github.com/SarahPruene/shecodes-react-weather-app'
