@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import CurrentWeather from './CurrentWeather'
 import Forecast from './Forecast'
 import axios from 'axios'
+import Loader from 'react-loader-spinner'
 import './styles/App.css'
 import './styles/Weather.css'
 
@@ -88,6 +89,6 @@ export default function Weather(props) {
     )
   } else {
     search()
-    return ' Loading'
+    return <Loader type='Bars' color='#488884' height={80} width={80} />
   }
 }
