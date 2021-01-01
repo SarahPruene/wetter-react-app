@@ -42,18 +42,18 @@ export default function Weather(props) {
   }
 
   function getLocalData(position) {
-        let latitude = position.coords.latitude
-        let longitude = position.coords.longitude
-        let apiKey = '3e43755f9b9e49aaa25fe2da226ada2b'
-        let apiUrl = 'https://api.openweathermap.org/data/2.5/weather?'
+    let latitude = position.coords.latitude
+    let longitude = position.coords.longitude
+    let apiKey = '3e43755f9b9e49aaa25fe2da226ada2b'
+    let apiUrl = 'https://api.openweathermap.org/data/2.5/weather?'
 
-        axios
-          .get(
-            `${apiUrl}lat=${latitude}&lon=${longitude}&units=metric&appid=${apiKey}`
-          )
-          .then(handleResponse)
+    axios
+      .get(
+        `${apiUrl}lat=${latitude}&lon=${longitude}&units=metric&appid=${apiKey}`
+      )
+      .then(handleResponse)
 
-        apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`
+    apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`
   }
 
   if (weatherData.ready) {
@@ -76,8 +76,8 @@ export default function Weather(props) {
           </button>
           <button onClick={getLocation} className='btn'>
             <img
-              src='https://img.icons8.com/cotton/64/000000/search--v1.png'
-              alt='submit button'
+              src='https://img.icons8.com/cotton/64/000000/worldwide-location--v1.png'
+              alt='get current location'
               rel='stylesheet'
             />
           </button>
