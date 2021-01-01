@@ -11,6 +11,14 @@
   color: #488884;
 }
 
+.WeatherTemp a,
+.WeatherTemp a:hover,
+.WeatherTemp a:active,
+.WeatherTemp a:focus {
+  color: #488884;
+  font-weight: 700;
+}
+
 @media screen and (max-width: 768px) {
   .WeatherTemp .temp {
     font-size: 50px;

@@ -37,6 +37,25 @@ export default function Weather(props) {
     axios.get(apiUrl).then(handleResponse)
   }
 
+  function getLocation() {
+    navigator.geolocation.getCurrentPosition(getLocalData)
+  }
+
+  function getLocalData(position) {
+        let latitude = position.coords.latitude
+        let longitude = position.coords.longitude
+        let apiKey = '3e43755f9b9e49aaa25fe2da226ada2b'
+        let apiUrl = 'https://api.openweathermap.org/data/2.5/weather?'
+
+        axios
+          .get(
+            `${apiUrl}lat=${latitude}&lon=${longitude}&units=metric&appid=${apiKey}`
+          )
+          .then(handleResponse)
+
+        apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`
+  }
+
   if (weatherData.ready) {
     return (
       <div className='Weather'>
@@ -55,6 +74,13 @@ export default function Weather(props) {
               rel='stylesheet'
             />
           </button>
+          <button onClick={getLocation} className='btn'>
+            <img
+              src='https://img.icons8.com/cotton/64/000000/search--v1.png'
+              alt='submit button'
+              rel='stylesheet'
+            />
+          </button>
         </form>
         <CurrentWeather data={weatherData} />
         <Forecast city={weatherData.city} />
@@ -65,4 +91,3 @@ export default function Weather(props) {
     return ' Loading'
   }
 }
-
